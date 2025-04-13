@@ -8,6 +8,24 @@ The RT-4D v3.14 firmware has been fully reverse engineered and before it can be 
 The build in this repository has feature parity with Radtel's original firmware, but probably has some bugs.
 Since there is a lot of code and a lot of ways to trigger every feature/quirk of the firmware, I was not able to test everything.
 
+# Changelog
+
+- The original.bin is a version of the firmware that is largely unmodified from the original excepted for some bug fixes. No UI changes or extra features.
+- The extra.bin is a version that has extra changes and features:
+  - A modified DMR screen that works with both promiscuous and non promiscuous modes.
+  - Toggling promiscuous mode displays correctly on the screen.
+  - A small P is displayed on the bottom of the screen when Promiscuous mode is enabled.
+  - New menu "Extra        16" with TX Backlight and Voltage Show.
+    - The backlight can be turned off after 5 seconds of TX'ing.
+    - The battery voltage can be displayed instead of a meter.
+  - Scan Direction replaced with Scan Duration (duration of time spent on a single frequency before moving on)
+  - The address book and contacts functions can be bound to the side keys and the long press keys.
+  - The green key long press behaviour can also be modified to invoke the contacts instead.
+  - When editing a text or number field, the editor will place the cursor at the end of the field.
+  - The default for a new ID is now 0 instead of 1, so that the editor starts with an empty field.
+  - Some measurement units were chaned to lower case.
+  - The call log now shows "From" and "To" IDs, which is useful for promiscuous mode. In addition, leading zeroes are trimmed.
+
 # DISCLAIMER
 
 While efforts have been made to avoid bugs that could corrupt your SPI flash, IT IS IMPERATIVE THAT USERS MAKE A BACKUP OF IT.
