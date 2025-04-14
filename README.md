@@ -10,6 +10,9 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 21
+  - Updated allowed DMR range in the 400MHz to match official 3.14.
+
 - Beta 20
   - It is now possible to update the DMR with this firmware instead of reverting to the official one.
 
