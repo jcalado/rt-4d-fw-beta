@@ -10,6 +10,10 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 22
+  - Fixed Radtel bug when changing the frequency step
+  - Block TX with local ID as the DMR firmware refuses to dial it anyway.
+
 - Beta 21
   - Updated allowed DMR range in the 400MHz to match official 3.14.
 
