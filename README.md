@@ -10,6 +10,10 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 23
+  - Fixed the DMR UI in the "extra" firmware when RX happens on the alternate VFO.
+  - No changes to "original" other than the version increase.
+
 - Beta 22
   - Fixed Radtel bug when changing the frequency step
   - Block TX with local ID as the DMR firmware refuses to dial it anyway.
