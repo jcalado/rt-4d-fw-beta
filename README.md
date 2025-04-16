@@ -10,6 +10,20 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 24
+  - Fixed the IDs from Promiscuous calls into the call log.
+  - Fixed type of call triggered by PTT during the call back (call hold) period.
+  - Add new option to "Extra 16" to enable using PTT in the Sub Tone screen.
+    - You can now test sub tones with a repeater by selecting a code, then pressing PTT to check if a repeater accepts it.
+  - Fixed logic bug with spectrum that was showing fewer peaks.
+  - Added option to fix the Radtel RSSI thresholds in the spectrum.
+    - Due to screen layout issues, the new "TH" field is written over the "DEC" field.
+    - The "DEC" field is still accessible by cycling through with the star key.
+    - The spectrum UI will be revamped at a later date.
+    - You may want to try setting a value of 25 and go up/down until you find the sweet spot.
+    - The firmware remembers your previous threshold setting.
+    - Please note that the RSSI thresholds vary between squelch levels, so a threshold reduction for SQ1 may or may not work for SQ2, SQ3, etc.
+
 - Beta 23
   - Fixed the DMR UI in the "extra" firmware when RX happens on the alternate VFO.
   - No changes to "original" other than the version increase.
