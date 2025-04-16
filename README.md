@@ -10,6 +10,9 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 25
+  - Fixed bug with saving/deleting Contacts, Call Log and SMS.
+
 - Beta 24
   - Fixed the IDs from Promiscuous calls into the call log.
   - Fixed type of call triggered by PTT during the call back (call hold) period.
