@@ -10,6 +10,17 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 27
+  - Replaced the Dual Standby icon from a "D" to a "DW".
+  - Added a "Pre TOT Warning". When enabled via "Extra 10", you will receive a double beep sound when you are close to the TOT limit.
+    - If the TOT is between 10 and 60 seconds, the warning sound will come 5 seconds before TOT.
+    - If the TOT is greater than 60 seconds, the warning sound will come 10 seconds before TOT.
+    - If the TOT is 5 seconds, there is no warning sound.
+  - Added an area indicator on the left side of screen, when in Single VFO display.
+  - When selecting channels in a zone, press # to alternate between the channel number and its alias.
+  - Fixed bug in the spectrum where the cursor was one pixel ahead of the RX frequency.
+    - Both a bug in my decompilation and a bug in Radtel's official firmare.
+
 - Beta 26
   - Fixed bug with address book lookup introduced in Beta 23.
   - Battery voltage displayed now shows the 'v'.
@@ -23,7 +34,7 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 - Beta 24
   - Fixed the IDs from Promiscuous calls into the call log.
   - Fixed type of call triggered by PTT during the call back (call hold) period.
-  - Add new option to "Extra 16" to enable using PTT in the Sub Tone screen.
+  - Add new option to "Extra 10" to enable using PTT in the Sub Tone screen.
     - You can now test sub tones with a repeater by selecting a code, then pressing PTT to check if a repeater accepts it.
   - Fixed logic bug with spectrum that was showing fewer peaks.
   - Added option to fix the Radtel RSSI thresholds in the spectrum.
@@ -50,7 +61,7 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 - Beta 19
   - Fixed Channel ID corruption on input
-  - Added Live CTCSS scanner to the "Extra 16" menu.
+  - Added Live CTCSS scanner to the "Extra 10" menu.
 
 - Beta 18
   - The original.bin is a version of the firmware that is largely unmodified from the original excepted for some bug fixes. No UI changes or extra features.
@@ -58,7 +69,7 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
     - A modified DMR screen that works with both promiscuous and non promiscuous modes.
     - Toggling promiscuous mode displays correctly on the screen.
     - A small P is displayed on the bottom of the screen when Promiscuous mode is enabled.
-    - New menu "Extra 16" with TX Backlight and Voltage Show.
+    - New menu "Extra 10" with TX Backlight and Voltage Show.
       - The backlight can be turned off after 5 seconds of TX'ing.
       - The battery voltage can be displayed instead of a meter.
     - Scan Direction replaced with Scan Duration (duration of time spent on a single frequency before moving on)
