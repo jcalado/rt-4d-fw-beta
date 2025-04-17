@@ -10,6 +10,13 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 26
+  - Fixed bug with address book lookup introduced in Beta 23.
+  - Battery voltage displayed now shows the 'v'.
+  - Save mode setting is now displayed on the top status bar.
+    - This will help those users that do not know save mode 1:3 does not enable the backlight during RX / TX.
+    - Due to lack of contiguous space, the Alert Voice / Beep indicator has been shifted to left to make way.
+
 - Beta 25
   - Fixed bug with saving/deleting Contacts, Call Log and SMS.
 
