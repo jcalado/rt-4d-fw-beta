@@ -10,6 +10,18 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 28
+  - Improved spectrum feature.
+    - Press PTT to exit the spectrum info Frequency Mode with the same frequency selected by the cursor.
+    - Press up/down keys to skip a "stuck in RX" frequency.
+    - Long press up/down to move the cursor faster.
+    - Press Side 1 key to add the current frequency to a blacklist
+    - Long press Side 1 key to clear the blacklist
+    - Exiting the spectrum will clear the blacklist
+  - Fixed Radtel bug where starting scanning while RX is active will stop at the next frequency with the green LED turned on.
+  - Press up/down key during frequency scan to skip "stuck in RX".
+  - Fixed bug that would wipe the calibration when using the Radtel Tuning software.
+
 - Beta 27
   - Replaced the Dual Standby icon from a "D" to a "DW".
   - Added a "Pre TOT Warning". When enabled via "Extra 10", you will receive a double beep sound when you are close to the TOT limit.
