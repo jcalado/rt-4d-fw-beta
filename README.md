@@ -10,6 +10,27 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 29
+  - Switching to DMR in Frequency/VFO mode will now default to Promiscuous mode.
+  - Added a new feature in "Key Define" to allow switching the DMR TS with a long press (only in Frequency/VFO mode).
+  - You can now jump to a channel/key/zone by number when in select screens (e.g. Zone list, Channel list , Keys list).
+    - Enter a digit to start edit mode, press the menu key to jump.
+  - You can now erase the last entered digit with the red key, when editing a frequency in Frequency/VFO mode.
+  - Setting the same zone in A and B will no longer copy the channel number from one into the other when changing screens.
+    - Each zone now keeps track the channel for each area (A and B) and saves it to flash.
+    - Warning: when using Radtel CPS, the current zone channel for area B will be reset.
+  - Fixed a Radtel bug when editing the zone name and it happened to be in the active area. The name will now be updated immediately.
+  - Upgraded frequency scanner feature.
+    - The Scan options in "Basic Set 01" have been changed.
+      - Scan Duration and Scan Return are unchanged.
+      - Scan End is its own menu and independent of TO/CO modes.
+      - Scan Mode has been replaced by Scan Continue.
+        - Scan Continue defines the time before the scanner resumes when the signal goes away during RX.
+        - Scan Continue of 0 will make the scanner stay at the found frequency, even when the signal is gone and until the user presses the up/down key.
+      - Scan Dwell is permanently on, terminates RX after the specified timeout and resumes scanning.
+        - Scan Dwell of 0 will let RX play until the signal goes away. You can press up/down key to skip.
+      - More explanations and details can be found (here)[https://github.com/DualTachyon/rt-4d-fw-beta/discussions/10#discussioncomment-12892323]. Warning: long thread!
+
 - Beta 28
   - Improved spectrum feature.
     - Press PTT to exit the spectrum info Frequency Mode with the same frequency selected by the cursor.
