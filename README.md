@@ -10,6 +10,24 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 30
+  - Fixed Radtel bug where the * character in the Sub Tone screen was corrupted when scrolling down.
+  - Increased the minimum scan speed to 60ms as screen updates introduces some RFI that prevents weaker signals from being detected.
+    - A reminder that a scan speed of less than 200ms is not recommended by Radtel engineers.
+  - Added a simple "scan range" feature to the scanner. Edit your desired frequency start and end at "Extra 10" -> "Scan Range LO/HI".
+    - LO has to be less than HI or the frequency will be rejected. You may need to adjust HI first in some situations.
+  - Improved the scanner user interface.
+  - Fixed the Scan Dwell timer for DMR (it was missing).
+  - Added "Last CH" option to "Scan Return". When exiting the scanner and a signal was previously found, the frequency/channel will be selected on the main screen.
+  - Changed the scanner to scan both DMR TS. Due to DMR firmware restrictions, dual TS in Promiscuous is not yet available.
+  - Added 2 extra ranges to the Frequency Detect feature.
+    - "<240 MHz" will cover 18..240 MHz.
+    - ">240 MHz" will cover 240..999 MHz.
+    - 240 Mhz was chosen as that is the cut off point at which the radio switches the antennas between VHF and UHF.
+  - Added a potential fix / workaround for the "Silent RX" DMR bug.
+  - Added a "DMR Scan Speed" option in "Extra 10". This lets you reduce the scan speed to 400ms.
+    - Please not that this is not advised and may miss channels or have side effects with the DMR firmware.
+
 - Beta 29
   - Switching to DMR in Frequency/VFO mode will now default to Promiscuous mode.
   - Added a new feature in "Key Define" to allow switching the DMR TS with a long press (only in Frequency/VFO mode).
