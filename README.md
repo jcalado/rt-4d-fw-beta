@@ -10,6 +10,20 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 # Changelog
 
+- Beta 31
+  - Support for display foreign characters has been fixed.
+  - A small key icon is now displayed at the bottom if the current channel is configured with a DMR key.
+  - Antenna icon has little use or meaning, so it has been replaced with the dual standby indicator.
+  - Fixed some visual corruption when scanning DMR in channel/zone mode.
+  - Fixed a few bugs with SMS reception and transmission.
+  - Fixes / improvements on official firmware
+    - Improved Radtel experience with changing channels by number.
+      - You can now enter for example "33" and then press enter to go to 0033.
+    - Now keeps track of the frequency offset in Frequency / VFO mode.
+    - Modulation is no longer reset in Frequency/VFO mode when changing frequency by key up/down or by activating scanning.
+      - The exception is that going into Airband will force the modulation to be AM.
+
+
 - Beta 30
   - Fixed Radtel bug where the * character in the Sub Tone screen was corrupted when scrolling down.
   - Increased the minimum scan speed to 60ms as screen updates introduces some RFI that prevents weaker signals from being detected.
