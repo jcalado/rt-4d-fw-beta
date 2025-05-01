@@ -1,3 +1,6 @@
+## ⚠️ WARNING ⚠️
+**FROM BETA 32, READ THE CHANGELOG BELOW BEFORE FLASHING**
+
 # Support
 
 * If you like my work, you can support me through https://ko-fi.com/DualTachyon
@@ -9,6 +12,39 @@ The build in this repository has feature parity with Radtel's original firmware,
 Since there is a lot of code and a lot of ways to trigger every feature/quirk of the firmware, I was not able to test everything.
 
 # Changelog
+
+The changelog below is often technical. To find more friendly documentation, you can head to the nice [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the beta releases.
+
+- Beta 32
+  - WARNING: BACKUP YOUR SETTINGS WITH CPS 1.21 IF YOU HAVEN'T INSTALLED OR USED 3.15 YET!
+  - This beta is based on the v3.15 baseline from Radtel. This means a few things:
+    - Not all official v3.15 changes have been implemented. Mainly, the spectrum update and "green LED" on DMR activity are not present in beta 32.
+    - If you already upgraded to official 3.15 and are still using it, you can flash the beta directly and skip the following 2 comments. Otherwise read on.
+      - Please follow the Radtel instructions in setting up a new code plug to prevent loss of data.
+      - The biggest change is that RX groups have been expanded from 16 contacts to 128. This means if you don't have a backup, all but the first group in your RT-4D will be corrupted.
+      - You can use CPS 1.22 to reload your groups, but make sure you follow Radtel instructions about CPS usage.
+  - Improved CPS compatibility by moving new Scan Return setting.
+    - If you have previously used the "Last CH" setting, please update the setting via the radio.
+    - The setting in CPS is effectively ignored by this firmware moving forward.
+    - CPS 1.22 and earlier will give an error if you read from the RT-4D with keys defined with non official features.
+      - You can unbind those keys temporarily to be able to read+modify+write with CPS.
+      - This will be improved in a future version.
+  - Fixed Radtel bug where the incorrect CC is sometimes displayed.
+  - Fixed Radtel bug where the wrong CC would play in non-promiscuous mode.
+  - Fixed Radtel bug with zone channel editing where wrong channels would toggle and some duplicates appeared.
+  - You can press the Menu key in the DMR Dial screen for a quick key-in without having to reach for PTT.
+  - The green key long press now inherits all feature options of the other keys.
+    - PLEASE REBIND THIS KEY with your preferred action as beta32 will interpret the previous setting as a different one.
+  - Scanner supports a block list, similar to the spectrum.
+    - Short press side 1 key to block a frequency / channel. Up to 256 are supported.
+    - Long  press side 1 key to clear the block list
+    - Block list is cleared when scanning ends.
+  - Added a new hotkey option "Next Zone". Activating this feature will load the next zone that has channels.
+  - Added a new hotkey option "Send DTMF" to bring up the "DTMF Select" menu with the 16 DTMF strings.
+  - You can press the green key in the "DTMF Select" to quickly transmit that string.
+  - You can press the green key in the scanner to exit to the last found channel/frequency.
+  - When editing zone channels, empty channels and channels with empty names will now be populated with "Empty-XXXX" and "No Alias" respectively.
+  - Fixed DMR tones not playing when entering/exiting a call.
 
 - Beta 31
   - Support for display foreign characters has been fixed.
