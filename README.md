@@ -15,6 +15,22 @@ Since there is a lot of code and a lot of ways to trigger every feature/quirk of
 
 The changelog below is often technical. To find more friendly documentation, you can head to the nice [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the beta releases.
 
+- Beta 33
+  - Support for parity with Radtel 3.16 is targeting Beta 34 or 35.
+  - Fixed Radtel bug with PTT within the address book. It now works.
+  - Fixed Radtel bug where the current channel might change if an invalid TX frequency was present.
+  - Fixed Radtel bug introduced in 3.15 with some visual corruption.
+  - Fixed a bug with DCS decoding in the CTCSS/DCS scanner.
+  - The backlight will turn on when your RT-4D is being probed by "Online Check" and "Remote Stun/Kill/Wake/Monitor".
+  - When in the DMR dial screen, press # to activate the remote features being usable from that screen.
+    - You only need to press # once per session, it will persist until you power off / restart.
+    - Press # multiple times to cycle through the different features.
+    - The selected feature is remembered every time you invoke the dial screen.
+    - Long press the green key to activate the selected feature.
+    - This only works when the ID is the private type.
+  - "Live CTCSS" has been renamed to "Live SubTone" since it now supports DCS.
+  - Renamed various typos, short names and some non sensical text.
+
 - Beta 32
   - WARNING: BACKUP YOUR SETTINGS WITH CPS 1.21 IF YOU HAVEN'T INSTALLED OR USED 3.15 YET!
   - This beta is based on the v3.15 baseline from Radtel. This means a few things:
