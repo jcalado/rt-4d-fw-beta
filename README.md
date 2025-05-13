@@ -34,6 +34,11 @@ The build in this repository has feature parity with Radtel's original firmware,
 
 The changelog below is often technical. To find more friendly documentation, you can head to the nice [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the beta releases.
 
+- Beta 34.1 minor hotfix
+  - Clear the screen after entering the boot password.
+  - Fixed Radtel bug where the scanner in VFO mode may not enter the selected scan range.
+  - Note there is no indicator anywhere that you are running 34.1 vs 34.
+
 - Beta 34
   - This beta uses the 3.16 baseline but excludes the following:
     - The "Carrier LED" is very buggy and latches on Tier 3 data transmissions.
