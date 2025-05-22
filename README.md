@@ -2,6 +2,11 @@
 
 * If you like my work, you can support me through https://ko-fi.com/DualTachyon
 
+# Common courtesy
+
+Don't be an entitled user like "fe8769". Asking for help and then refusing it because "I have 40 years of experience with SW dev, it won't work.".
+If you know the firmware / RT-4D better than me, then don't ask for my help or use my firmware.
+
 # Forewarning
 
 - The RT-4D is not a toy. If you bought it as such, don't use my firmware.
@@ -15,6 +20,7 @@
   - Not filing a bug doesn't help improve the firmware.
 - This firmware requires some experience using computers and the command line.
   - If you can't handle the command line, don't use my firmware.
+  - If you don't know how to deal with "COMx", don't use my firmware.
 - If you struggle to find a download for the flasher tools, don't use my firmware.
   - If finding the download is too difficult, using my firmware or the RT-4D will be even more difficult for you.
 - If you think 3.14 is perfect, then don't use my firmware. Enjoy all the crappy bugs that Radtel still hasn't fixed even in 3.16.
@@ -22,6 +28,10 @@
   - It only takes an extra minute to reload from CSV and fix up a few small details.
 - If you complain that "it doesn't work" and then provide no details whatsoever, then don't use my firmware.
 - If you don't like "nicsure", that's your choice but I have no relationship whatsoever with them.
+- If you think that the iRadio 3.16 firmware works better than Radtel 3.16, don't use my firmware.
+  - Apart from some text differences, they are literally the SAME code. A quick binary comparison will show this.
+  - You're probably doing something wrong and blaming it on the firmware.
+- If you think I'm annoying, then don't use my firmware! I never forced you to use my stuff. Go and use the official firmware.
 
 If you fit in any of the above points, stick to Official Radtel firmware as this firmware is not for you.
 
@@ -33,6 +43,58 @@ The build in this repository has feature parity with Radtel's original firmware,
 # Changelog
 
 The changelog below is often technical. To find more friendly documentation, you can head to the nice [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the beta releases.
+
+- Beta 35
+  - Fixes to original firmware:
+    - When sending an SMS fails, no longer get kicked out to the main screen.
+    - Check the sending ID is valid before sending.
+  - Added "PTT Lock" to "Extra 06" to disable PTT during key lock / always.
+  - Long pressing the red key in the dial and DTMF screen will erase the entire input field.
+  - Fixed a bug with saving SMS.
+  - The spectrum has been revamped.
+    - Noise suppression logic has been refactored.
+      - 3 new controls have been added to allow finer control for opening squelch.
+        - Noise suppression threshold.
+        - Noise floor.
+        - Noise register check.
+      - You can find more details below about their usage.
+      - It is also best understood by trying to use it. I'm no technical writer and my explanations will often suck.
+    - The top of the screen shows settings that can be edited. From left to right:
+      - Step with a fixed list of values: 1.0, 2.5, 5.0, 6.25, 8.33, 10.0, 12.5, 25.0, 50.0, 100.0 kHz.
+      - Nxx: This is the noise suppression threshold and is accompanied by a slider on each side of the spectrum.
+      - Fxx: This allows you to raise/lower the noise floor and affects the Nxx value.
+      - Bandwidth: Narrow, Wide.
+      - Modulation: FM, AM, SSB.
+      - A "#" that represents the BK4819 Noise Register.
+        - When this is on, noise quality is checked by BK4819 before opening squelch, even if the signal is above Nxx threshold.
+        - Press side 2 key to toggle this setting on / off.
+      - A "J" that represents "jump mode" and lets you move the frequency range by 60 steps. Read below for instructions.
+    - The bottom of the screen shows 3 frequencies:
+      - Left value is the starting frequency.
+      - Middle value is the frequency of the last signal detected.
+      - Right value is the end frequency.
+    - Just under the spectrum are displayed an arrow pointing to the last frequency detected and the subtone, if available.
+    - Both sides of the spectrum show a small slider that represents the noise suppression threshold.
+    - Most settings at the top, and the left frequency can be edited via the * and up/down keys.
+    - Key usage:
+      - Press the * key to change the current field.
+        - When selected, the left frequency will have a small arrow to its right.
+        - When selected, the step, noise suppression, floor and bandwidth will be in inverted colors.
+      - Press the up/down key to modify the selected field.
+        - In frequency mode, this moves the frequency band by one step.
+          - Press the green key to activate "jump mode" change to move in 60 steps instead.
+          - Press it again to revert to one step mode.
+      - Press 0 to 9 to edit the start frequency, from any field.
+        - You can press the menu key to auto complete a frequency (e.g. press 144 MENU, for 144.000).
+      - Press the menu key to change the modulation.
+      - Press the # key to switch between monitor and scan mode.
+        - Scan mode lets you move the cursor around the spectrum without a signal taking over.
+      - Press side 1 to block an open signal.
+        - An empty vertical line will be displayed in the spectrum.
+      - Long press side 1 to clear the block list.
+      - Press side 2 key to skip an open signal.
+        - This is not a block and will be played again if found.
+      - Long press the side 2 key to turn on/off the noise register check.
 
 - Beta 34.1 minor hotfix
   - Clear the screen after entering the boot password.
