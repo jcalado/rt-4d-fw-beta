@@ -44,6 +44,43 @@ The build in this repository has feature parity with Radtel's original firmware,
 
 The changelog below is often technical. To find more friendly documentation, you can head to the nice [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the beta releases.
 
+- Beta 36
+  - Added "Show Zone Ch" to "Extra 06" menu, to select whether the bottom left channel number reflects the global channel or the number within the zone.
+  - Fixed bug with a clear screen when changing SMS format.
+  - Fixed a bug with analogue scrambling.
+  - Added new spectrum features. Other than any bug fixes, no new spectrum features for a few betas.
+    - Selecting the modulation has moved to the * key, like the step, noise, bandwidth fields.
+    - The menu key now controls alternate screens for new features.
+    - Press the menu key to alternate between the spectrum display, Scan Settings, Capture List and Blocked List.
+    - Spectrum display
+      - When in "Scan Mode", you can press the side 2 key to open squelch on any selected frequency.
+      - When in "Range Scan" (see below for details), you can press the red key to exit this mode.
+        - Traditional monitor mode will take effect.
+    - Scan Settings
+      - Press the up and down keys to select various options.
+      - Press the green key on any option to activate them.
+      - The "Start range scan" allows the spectrum to scan a wider range than fits on the screen.
+        - Press the green key to activate it.
+        - The frequency range can be modified with the "From:" and "To:" options.
+          - These 2 can only be edited with the keys 0 to 9.
+          - Press the menu key to auto complete a frequency (e.g. 144 MENU -> 144.000).
+      - When set to ON, the capture option will add detected frequencies to the capture list.
+      - When set to OFF, the replay option will skip detected frequencies from opening squelch.
+        - This is not a block and is meant to give an audible cue when a given range has been "fully" scanned.
+        - The replay option is only meaningful when capture is ON. When capture is OFF, replay is always ON.
+      - When set to a value other than INF(nite), the max dwell timer puts a limit to how long the squelch remains open.
+      - When set to a value other than NONE, the min dwell timer determines the minimum time an open signal must play before it is captured.
+    - Capture list
+      - Captured frequencies are shared with the frequency monitor.
+      - The storage list has been increased to 256.
+      - Like the frequency monitor, you can press the green key to alternate between frequency and subtone details.
+      - Long press side 1 key to delete a single frequency.
+      - Long press side 2 key (longer than normal) to delete all frequencies.
+      - Long press the menu button to go to VFO mode at a selected frequency.
+      - Press the red key to exit back to the main spectrum screen.
+    - Blocked list
+      - Same key usage as Capture List but no subtone information.
+
 - Beta 35
   - Fixes to original firmware:
     - When sending an SMS fails, no longer get kicked out to the main screen.
