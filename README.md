@@ -6,43 +6,32 @@
 
 Don't be an entitled user like "fe8769". Asking for help and then refusing it because "I have 40 years of experience with SW dev, it won't work.".
 If you know the firmware / RT-4D better than me, then don't ask for my help or use my firmware.
+Scare tactics like fake threats of calling law enforcement using bogus laws you don't understand is also not it.
+
+Congratulation to those who felt the need to publicly spread hate in a public chat group, and those that defended it.
+Development will now happen whenever I feel like it.
 
 # Forewarning
 
-- The RT-4D is not a toy. If you bought it as such, don't use my firmware.
-- This firmware is not for newbies to radios or DMR.
-  - If you don't have experience with DMR and making your own code plugs, don't use my firmware.
-  - If you need to ask people how to dial a TG or call someone, don't use my firmware.
-  - This firmware targets intermediate and expert level users.
-- If you are incapable to follow instructions outlined below, don't use my firmware.
-  - That means if you "flashed" my firmware and it "bricked", you didn't follow the instructions to the letter.
-- If your first instinct is to complain on Facebook instead of filing a bug to try to get it solved, don't use my firmware.
-  - Not filing a bug doesn't help improve the firmware.
-- This firmware requires some experience using computers and the command line.
-  - If you can't handle the command line, don't use my firmware.
-  - If you don't know how to deal with "COMx", don't use my firmware.
-- If you struggle to find a download for the flasher tools, don't use my firmware.
-  - If finding the download is too difficult, using my firmware or the RT-4D will be even more difficult for you.
-- If you think 3.14 is perfect, then don't use my firmware. Enjoy all the crappy bugs that Radtel still hasn't fixed even in 3.16.
-- If the new CPS is too daunting for you, don't use my firmware. I keep up with the latest version and so should you.
-  - It only takes an extra minute to reload from CSV and fix up a few small details.
-- If you complain that "it doesn't work" and then provide no details whatsoever, then don't use my firmware.
-- If you don't like "nicsure", that's your choice but I have no relationship whatsoever with them.
-- If you think that the iRadio 3.16 firmware works better than Radtel 3.16, don't use my firmware.
-  - Apart from some text differences, they are literally the SAME code. A quick binary comparison will show this.
-  - You're probably doing something wrong and blaming it on the firmware.
-- If you think I'm annoying, then don't use my firmware! I never forced you to use my stuff. Go and use the official firmware.
+- **If you don't know what this firmware is about, just go visit somewhere else.**
+- **If you need a ready made codeplug to get started, just go visit somewhere else.**
+- **This firmware is not for newbies to radios or DMR. Go visit somewhere else if you are a newbie.**
+- **If you need to tell everyone on github that you have 40 years of computer and radio experience, go somewhere else.**
+- **If you double click a file and nothing happens, go visit somewhere else.**
+- **If you can't find a download for flashers, go visit somewhere else.**
+- **If you think I'm annoying, then don't use my firmware! I never forced you to use my stuff. Go and use the official firmware.**
 
 If you fit in any of the above points, stick to Official Radtel firmware as this firmware is not for you.
 
-# Beta test build of the fully reverse engineered version of RT-4D v3.14 firmware.
-
-The RT-4D firmware v3.10 to v3.16 have been fully reverse engineered,
-The build in this repository has feature parity with Radtel's original firmware, but may have some bugs.
-
 # Changelog
 
-The changelog below is often technical. To find more friendly documentation, you can head to the nice [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the beta releases.
+You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the releases.
+
+- WIP
+  - DCS codes are now correctly displayed in the capture list.
+  - Spectrum no longer renders or processes frequencies beyond the "To:" limit in Scan Range.
+  - In non promiscuous, calls coming from self ID are now ignored.
+
 
 - Beta 36
   - Added "Show Zone Ch" to "Extra 06" menu, to select whether the bottom left channel number reflects the global channel or the number within the zone.
@@ -354,45 +343,8 @@ The changelog below is often technical. To find more friendly documentation, you
     - Some measurement units were chaned to lower case.
     - The call log now shows "From" and "To" IDs, which is useful for promiscuous mode. In addition, leading zeroes are trimmed.
 
-# DISCLAIMER
-
-While efforts have been made to avoid bugs that could corrupt your SPI flash, IT IS IMPERATIVE THAT USERS MAKE A BACKUP OF IT.
-
-# SPI flash backup
-
-The following tools can be used:
-* [RT-4D-SPIFlash-CLI](https://github.com/DualTachyon/rt-4d-spiflash-cli)
-* [rt890-flash-rs](https://github.com/bricky149/rt890-flash-rs/releases/tag/1.2.96)
-
-How to make a backup:
-
-```
-Windows: RT-4D-SPIFlash-CLI.exe -p COMx -r spi.backup
-Windows: rt890-flash-rs.exe -4d -p COMx -o spi.backup
-Linux: ./rt890-flash-rs -4d -p /dev/ttyUSBx -o spi.backup
-```
-
-KEEP THIS BACKUP SAFE SOMEWHERE. It will allow you to recover your SPI flash to a fully working state, no matter what happens to it.
-
-# Requirements
-
-* You must have DMR firmware 1.2.0.6 installed on your RT-4D. 1.2.0.3 may work, but anyone reporting bugs with any versions before 1.2.0.x will be blocked from this repository.
-* You can suggest new features on the "Ideas" category of the "Discussions" tab of this repository. Suggestions will be evaluated but aren't guaranteed to be implemented.
-* If you finds bugs, report them on the Issues tab here on GitHub. Make a proper detailed bug report.
-
-A good bug report is: "XYZ feature doesn't work. I tested it by doing ABC and used DEF settings. You can see in this video/photo that original firmware works, but not in your beta build".
-Also a good report: "The text/bitmap in ABC is corrupted/misaligned/missing when doing DEF".
-
-A bad bug report is: "XYZ doesn't work, plz fix it" and will get you blocked.
-
-# How to flash the beta build
-
-DO NOT USE THE PREVIOUS "SPI" FLASH TOOL TO FLASH THE FIRMWARE.
-
-You can use the many firmware flashing tools below:
+# Flashing tools
 
 * [rt890-flash-rs](https://github.com/bricky149/rt890-flash-rs/releases/)
 * [RT-4D_Flasher](https://github.com/omegatee/RT-4D_Flasher)
-* [RT-4D-python-flasher](https://github.com/fagci/RT-4D-python-flasher)
-* [rt4d-goflasher](https://github.com/fagci/rt4d-goflasher)
 
