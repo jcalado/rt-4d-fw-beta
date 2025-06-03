@@ -30,6 +30,7 @@ You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-
 - WIP
   - DCS codes are now correctly displayed in the capture list.
   - Spectrum no longer renders or processes frequencies beyond the "To:" limit in Scan Range.
+    - Fixed display bug introduced by this feature when not in scan range mode.
   - In non promiscuous, calls coming from self ID are now ignored.
 
 
