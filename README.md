@@ -28,6 +28,7 @@ If you fit in any of the above points, stick to Official Radtel firmware as this
 You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the releases.
 
 - WIP
+  - Why wait for CPS to catch up. <a href="wip.png">Very very WIP.</a>
   - DCS codes are now correctly displayed in the capture list.
   - Spectrum no longer renders or processes frequencies beyond the "To:" limit in Scan Range.
     - Fixed display bug introduced by this feature when not in scan range mode.
