@@ -7,6 +7,7 @@
 Don't be an entitled user like "fe8769". Asking for help and then refusing it because "I have 40 years of experience with SW dev, it won't work.".
 If you know the firmware / RT-4D better than me, then don't ask for my help or use my firmware.
 Scare tactics like fake threats of calling law enforcement using bogus laws you don't understand is also not it.
+Fake accusations of harassment also won't work. Still waiting for your public apology, dude...
 
 Congratulation to those who felt the need to publicly spread hate in a public chat group, and those that defended it.
 Development will now happen whenever I feel like it.
@@ -27,13 +28,24 @@ If you fit in any of the above points, stick to Official Radtel firmware as this
 
 You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the releases.
 
+- Beta 37 - Small and simple changes.
+  - Fixed incorrect display of DCS subtones when captured with the spectrum or frequency monitor.
+  - Spectrum no longer renders columns of non existing frequencies.
+    - If your spectrum range does not align to the width of the spectrum (= 121 steps), you will see a partial spectrum only.
+  - The LCD contrast is updated in real time when scrolling through the possible values in "Basic Set" -> "LCD Contrast".
+    - Cancelling, pressing PTT or allow the exit timer to kick in will restore the contrast to the original setting.
+    - A reboot is no longer required to take effect.
+  - Long press the red key to exit to the main screen from any menu, deep level or otherwise.
+  - The red LED will blink when attempting a DMR transmission to indicate progress contacting a DMR repeater.
+    - The LED will then stay on as previously if a connection was made while PTT is still held.
+    - The LED will turn off when PTT is released or if connection to the repeater failed.
+
 - WIP
   - Why wait for CPS to catch up. <a href="wip.png">Very very WIP.</a>
   - DCS codes are now correctly displayed in the capture list.
   - Spectrum no longer renders or processes frequencies beyond the "To:" limit in Scan Range.
     - Fixed display bug introduced by this feature when not in scan range mode.
   - In non promiscuous, calls coming from self ID are now ignored.
-
 
 - Beta 36
   - Added "Show Zone Ch" to "Extra 06" menu, to select whether the bottom left channel number reflects the global channel or the number within the zone.
