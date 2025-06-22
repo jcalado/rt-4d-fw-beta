@@ -28,6 +28,8 @@ If you fit in any of the above points, stick to Official Radtel firmware as this
 
 You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the releases.
 
+- From beta 38 onwards, the minimum DMR firmware suported will be 1.2.0.16. Any bug reports with b38+ that use older versions will be ignored.
+
 - Beta 38
   - Added "STICKY" mode to the DMR dial screen (green key).
     - In sticky mode, the entered ID will be used as the default contact for PTT when on the main screen.
