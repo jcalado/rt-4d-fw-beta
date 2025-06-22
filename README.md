@@ -28,6 +28,16 @@ If you fit in any of the above points, stick to Official Radtel firmware as this
 
 You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-fw-beta/wiki) by [Joel](https://github.com/jcalado). Be aware that the documentation can sometimes lag behind the releases.
 
+- Beta 38
+  - Added "STICKY" mode to the DMR dial screen (green key).
+    - In sticky mode, the entered ID will be used as the default contact for PTT when on the main screen.
+    - This let's you change a TG temporarily without needing to input it over and over again.
+    - Press * to activate sticky mode.
+    - A small inverted S will appear on the bottom right of the screen.
+    - Press * again to de-activate sticky mode to restore "default contact" functionality.
+  - Press the side 2 key while in the DMR dial screen to save the entered ID as a new contact.
+  - The instructions option in "Basic Set" has been removed.
+
 - Beta 37 - Small and simple changes.
   - Fixed incorrect display of DCS subtones when captured with the spectrum or frequency monitor.
   - Spectrum no longer renders columns of non existing frequencies.
