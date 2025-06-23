@@ -30,6 +30,11 @@ You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-
 
 - From beta 38 onwards, the minimum DMR firmware suported will be 1.2.0.16. Any bug reports with b38+ that use older versions will be ignored.
 
+- Beta 39
+  - Added DMR group name resolution in "Extra" menu.
+    - If a group ID exists in your contacts list, it will be resolved and displayed instead of "GID:xxxx".
+  - When a caller ID is not in the address book, "ID not found" will be displayed.
+
 - Beta 38
   - Added "STICKY" mode to the DMR dial screen (green key).
     - In sticky mode, the entered ID will be used as the default contact for PTT when on the main screen.
