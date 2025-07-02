@@ -30,6 +30,15 @@ You find more friendly documentation at [wiki](https://github.com/jcalado/rt-4d-
 
 - From beta 38 onwards, the minimum DMR firmware suported will be 1.2.0.16. Any bug reports with b38+ that use older versions will be ignored.
 
+- Beta 40
+  - Fixed a bug with receiving group SMS.
+  - As a result, RX group list now only support 32 IDs.
+    - If you have more than 32 IDs in a group, only up to 32 will be used. The rest will be ignored.
+    - If you need more than 32 IDs per group, you're probably doing it wrong anyway.
+    - "But Dual! My OGD77 radio supports more than 32 IDs!". Great, then go use your OGD77 radio. This is not OGD77 firmware.
+  - Fixed the scanner being interrupted by pressing a key when the key lock was in effect.
+  - Fixed a bug where the TX LED could stay on after a very short transmission.
+
 - Beta 39
   - Added DMR group name resolution in "Extra" menu.
     - If a group ID exists in your contacts list, it will be resolved and displayed instead of "GID:xxxx".
